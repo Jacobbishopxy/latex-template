@@ -1,5 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
 
 \graphicspath{\subfix{./images/}}
 
@@ -9,6 +11,10 @@
 \title{Latex Template}
 \author{Jacob Bishop}
 \date{2022-12-05}
+
+% adding style
+\usepackage{./style}
+\lstset{style=mystyle}
 
 \begin{document}
 
@@ -23,5 +29,11 @@
 \section{Second section}
 
 \subfile{sections/section2}
+
+\newpage
+
+\section{Code example}
+
+\subfile{sections/code}
 
 \end{document}
