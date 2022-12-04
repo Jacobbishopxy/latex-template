@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{graphicx}
+
+\graphicspath{\subfix{./images/}}
+
+\usepackage{blindtext}
+\usepackage{subfiles} % Best loaded last in the preamble
+
+\title{Latex Template}
+\author{Jacob Bishop}
+\date{2022-12-05}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\subfile{sections/introduction}
+
+\newpage
+
+\section{Second section}
+
+\subfile{sections/section2}
+
+\end{document}
