@@ -1,2 +1,4 @@
-out/
+out/*
+!out/main.pdf
+sections/out
 *.log
