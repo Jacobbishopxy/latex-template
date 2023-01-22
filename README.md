@@ -4,9 +4,15 @@ Not only a LaTeX template, but also a study note.
 
 - [LaTeX setup](https://jacobbishopxy.github.io/docs/2022-12-3-latex-setup/)
 
-- [LaTeX Multi-file projects](https://www.overleaf.com/learn/latex/Multi-file_LaTeX_projects)
+- [LaTeX multi-file projects](https://www.overleaf.com/learn/latex/Multi-file_LaTeX_projects)
 
-- [LaTeX Code Listings](https://nasa.github.io/nasa-latex-docs/html/examples/listing.html)
+- [LaTeX code listings](https://nasa.github.io/nasa-latex-docs/html/examples/listing.html)
+
+- [TiKz website](https://tikz.net/): LaTeX graphics package
+
+- [TiKz tutorial](https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ%3A_A_Tutorial_for_Beginners_(Part_1)%E2%80%94Basic_Drawing)
+
+- [GeoGebra](https://www.geogebra.org/): generating TiKz Code
 
 ## Content
 
@@ -62,4 +68,4 @@ PS: The reason why used different `\graphicspath` in main and sub is there relat
 
 ### TiKz tutorial
 
-LaTeX Graphics (Work in progess)
+LaTeX Graphics
