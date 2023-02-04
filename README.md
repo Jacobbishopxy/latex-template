@@ -1,71 +1,37 @@
-# LaTeX Template
-
-Not only a LaTeX template, but also a study note.
+# Latex Template
 
 - [LaTeX setup](https://jacobbishopxy.github.io/docs/2022-12-3-latex-setup/)
 
-- [LaTeX multi-file projects](https://www.overleaf.com/learn/latex/Multi-file_LaTeX_projects)
+- [VsCode settings for LaTeX](./VsCode_settings_for_LaTeX.json)
 
-- [LaTeX code listings](https://nasa.github.io/nasa-latex-docs/html/examples/listing.html)
+- [LaTeX Multi-file projects](https://www.overleaf.com/learn/latex/Multi-file_LaTeX_projects)
 
-- [TiKz website](https://tikz.net/): LaTeX graphics package
+- [LaTeX Code Listings](https://nasa.github.io/nasa-latex-docs/html/examples/listing.html)
 
-- [TiKz tutorial](https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ%3A_A_Tutorial_for_Beginners_(Part_1)%E2%80%94Basic_Drawing)
+## Real LaTeX projects
 
-- [GeoGebra](https://www.geogebra.org/): generating TiKz Code
+- [studies-cpp](https://github.com/Jacobbishopxy/studies-cpp)
 
-## Content
+- [poma-notes](https://github.com/Jacobbishopxy/poma-notes)
 
-### Sub-files
+## Note
 
-[main.tex] and all the sub-files in sections folder.
+- `commands.tex`: customized commands, can be use anywhere because it is imported in the main file by `\input{commands}`.
 
-main:
+- `style.sty`: style file, affects all the related line or blocks (imported in the main file by `\usepackage{./style}` and `\lstset{style=mystyle}`).
 
-```tex
-\usepackage{subfiles}
-```
+- custom theorem style
 
-sub:
+  ```tex
+  \newtheoremstyle{mytheoremstyle}                          % name
+        {\topsep}                                           % Space above
+        {\topsep}                                           % Space below
+        {\itshape\fontfamily{ptm}\selectfont}               % Body font
+        {}                                                  % Indent amount
+        {\fontfamily{ptm}\selectfont\scshape\color{blue}}   % Theorem head font
+        {:}                                                 % Punctuation after theorem head
+        {.5em}                                              % Space after theorem head
+        {}                                                  % Theorem head spec
+  ```
 
-```tex
-\documentclass[../main.tex]{subfiles}
-```
-
-### Embeded PNG
-
-[introduction.tex](./sections/introduction.tex):
-
-main:
-
-```tex
-\graphicspath{\subfix{./images/}}
-```
-
-sub:
-
-```tex
-\graphicspath{{\subfix{../images/}}}
-
-\begin{figure}[bh]
-  \centering
-  \includegraphics[width=3cm]{\subfix{../images/Yelan}}
-
-  \label{fig:yelan}
-  \caption{Yelan}
-\end{figure}
-```
-
-PS: The reason why used different `\graphicspath` in main and sub is there relative import's locations are different. Furthermore, since we are in the sub-file mode, which implies each sub-file can be compiled individually, hence including images file seperately is very neccessay.
-
-### Custom commands
-
-[commands.tex](commands.tex): customized commands, can be use anywhere because it is imported in the main file by `\input{commands}`.
-
-### Custom styling
-
-[style.sty](./style.sty): style file, affects all the related line or blocks (imported in the main file by `\usepackage{./style}` and `\lstset{style=mystyle}`).
-
-### TiKz tutorial
-
-LaTeX Graphics
+  Theorem head spec: can be left empty, meaning ‘normal’

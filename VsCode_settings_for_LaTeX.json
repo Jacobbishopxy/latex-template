@@ -1,0 +1,41 @@
+{
+	"latex-workshop.latex.outDir": "./out/",
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "xelatex",
+			"tools": ["xelatex"]
+		},
+		{
+			"name": "latexmk",
+			"tools": ["latexmk"]
+		}
+	],
+	"latex-workshop.latex.tools": [
+		{
+			"name": "xelatex",
+			"command": "xelatex",
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"-output-directory=%OUTDIR%",
+				"-pdf",
+				"%DOCFILE%"
+			]
+		},
+		{
+			"name": "latexmk",
+			"command": "latexmk",
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"-pdf",
+				"-outdir=%OUTDIR%",
+				"%DOCFILE%"
+			]
+		}
+	],
+	"latex-workshop.message.error.show": false,
+	"latex-workshop.message.warning.show": false
+}
